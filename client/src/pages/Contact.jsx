@@ -2,10 +2,28 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const CARDS = [
-  { icon: "📧", title: "Email Us", detail: "hello@skillbridgetech.in" },
-  { icon: "📞", title: "Call Us", detail: "+91 98765 43210" },
-  { icon: "📍", title: "Location", detail: "Hazratganj, Lucknow, UP, India" },
-  { icon: "🕐", title: "Office Hours", detail: "Mon–Sat, 9 AM – 7 PM IST" },
+  {
+    icon: "📧",
+    title: "Email Us",
+    detail: "contact.skillbridgesolutions@gmail.com",
+    link: "mailto:contact.skillbridgesolutions@gmail.com",
+  },
+  {
+    icon: "📞",
+    title: "Call Us",
+    detail: "+91 9569065009",
+    link: "tel:+919569065009",
+  },
+  {
+    icon: "📍",
+    title: "Location",
+    detail: "Hazratganj, Lucknow, UP, India",
+  },
+  {
+    icon: "🕐",
+    title: "Office Hours",
+    detail: "Mon–Sat, 9 AM – 7 PM IST",
+  },
 ];
 
 const SOCIALS = [
@@ -70,7 +88,8 @@ const Contact = () => {
           </h2>
 
           <p className="text-gray-400 mt-4 max-w-md sm:max-w-xl mx-auto text-sm sm:text-base">
-            Have a project in mind or want to explore partnership? We'd love to hear from you.
+            Have a project in mind or want to explore partnership? We'd love to
+            hear from you.
           </p>
         </motion.div>
 
@@ -96,9 +115,18 @@ const Contact = () => {
                 {c.title}
               </h4>
 
-              <p className="text-xs sm:text-sm text-gray-400 mt-1">
-                {c.detail}
-              </p>
+              {c.link ? (
+                <a
+                  href={c.link}
+                  className="text-xs sm:text-sm text-gray-400 mt-1 block hover:text-cyan-400 transition"
+                >
+                  {c.detail}
+                </a>
+              ) : (
+                <p className="text-xs sm:text-sm text-gray-400 mt-1">
+                  {c.detail}
+                </p>
+              )}
             </motion.div>
           ))}
         </motion.div>

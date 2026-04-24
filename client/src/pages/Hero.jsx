@@ -2,9 +2,14 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const STATS = [
-  { num: 200, suffix: "+", label: "Projects Delivered", color: "text-orange-400" },
-  { num: 50, suffix: "+", label: "Happy Clients", color: "text-cyan-400" },
-  { num: 120, suffix: "+", label: "Interns Placed", color: "text-purple-400" },
+  {
+    num: 40,
+    suffix: "+",
+    label: "Projects Delivered",
+    color: "text-orange-400",
+  },
+  { num: 30, suffix: "+", label: "Happy Clients", color: "text-cyan-400" },
+  { num: 20, suffix: "+", label: "Interns Placed", color: "text-purple-400" },
 ];
 
 export default function Hero() {
@@ -32,7 +37,7 @@ export default function Hero() {
           observer.unobserve(el);
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     statsRef.current.forEach((el) => el && observer.observe(el));
@@ -51,19 +56,20 @@ export default function Hero() {
 
   return (
     <section className="relative flex items-center justify-center text-center px-4 sm:px-6 py-20 mt-20 sm:py-24 md:py-28 overflow-hidden bg-[#0b0f19] text-white">
-
       {/* Background */}
-      <div className="absolute inset-0 
+      <div
+        className="absolute inset-0 
         bg-[radial-gradient(ellipse_70%_60%_at_50%_40%,rgba(0,212,255,0.07),transparent_65%),
             radial-gradient(ellipse_40%_40%_at_20%_80%,rgba(176,38,255,0.1),transparent_60%),
-            radial-gradient(ellipse_40%_40%_at_80%_20%,rgba(255,107,53,0.08),transparent_60%)]" 
+            radial-gradient(ellipse_40%_40%_at_80%_20%,rgba(255,107,53,0.08),transparent_60%)]"
       />
 
       {/* Grid */}
-      <div className="absolute inset-0 
+      <div
+        className="absolute inset-0 
         bg-[linear-gradient(rgba(0,212,255,0.04)_1px,transparent_1px),
             linear-gradient(90deg,rgba(0,212,255,0.04)_1px,transparent_1px)]
-        bg-[size:40px_40px] sm:bg-[size:60px_60px]" 
+        bg-[size:40px_40px] sm:bg-[size:60px_60px]"
       />
 
       {/* Animated Orbs (Responsive) */}
@@ -90,7 +96,6 @@ export default function Hero() {
         animate="show"
         className="relative z-10 max-w-3xl"
       >
-
         {/* Badge */}
         <motion.div
           variants={item}
@@ -124,11 +129,11 @@ export default function Hero() {
           className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mb-10 sm:mb-12"
         >
           <button className="w-full sm:w-auto bg-white text-black px-6 py-3 rounded-xl hover:scale-105 transition">
-            Explore Services
+            <a href="#services"> Explore Services</a>
           </button>
 
           <button className="w-full sm:w-auto border border-white/30 px-6 py-3 rounded-xl hover:bg-white/10 transition">
-            Join Internship ✦
+            <a href="#internship">Join Internship ✦</a>
           </button>
         </motion.div>
 
@@ -153,7 +158,6 @@ export default function Hero() {
             </div>
           ))}
         </motion.div>
-
       </motion.div>
     </section>
   );

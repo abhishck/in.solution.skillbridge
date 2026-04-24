@@ -9,23 +9,36 @@ import ScrollTopBtn from "./components/ScrollTopBtn";
 import Hero from "./pages/Hero";
 import Internship from "./pages/Internship";
 import WhatsAppBtn from "./components/WhatsAppBtn";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <div className="bg-[#070b14] text-white">
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Portfolio />
-      <Internship/>
-      <Contact />
-      <Footer />
+    <>
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          style: {
+            background: "#0f172a",
+            color: "#fff",
+            border: "1px solid rgba(255,255,255,0.1)",
+          },
+        }}
+      />
+      <div className="bg-[#070b14] text-white">
+        <Navbar />
+        <Hero />
+        <About />
+        <Services />
+        <Portfolio />
+        <Internship />
+        <Contact />
+        <Footer />
 
-      {/* 🔥 Add it here (IMPORTANT) */}
-      <ScrollTopBtn />
-      <WhatsAppBtn/>
-    </div>
+        {/* 🔥 Add it here (IMPORTANT) */}
+        <ScrollTopBtn />
+        <WhatsAppBtn />
+      </div>
+    </>
   );
 }
 
