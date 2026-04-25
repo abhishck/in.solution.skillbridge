@@ -55,6 +55,10 @@ export default function Internship() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+     if (loading) return; // 👈 prevent double click
+
+  setLoading(true);
+
     if (
       !form.name ||
       !form.email ||

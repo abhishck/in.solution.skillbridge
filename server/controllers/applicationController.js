@@ -46,9 +46,34 @@ export const createApplication = async (req, res) => {
       data: application,
     });
   } catch (error) {
-     res.status(500).json({
-    success: false,
-    message: error.message, // show real error
-  });
+  console.error("❌ ERROR:", error);
+
+  // ✅ Handle duplicate email/phone
+  if (error.code === 11000) {
+    const field = Object.keys(error.keyPattern)[0];
+
+    return res.status(400).json({
+      success: false,
+      message: `${field} already exists. You have already applied.`,
+    });
   }
+
+  // ✅ Handle validation errors (mongoose)
+  if (error.name === "ValidationError") {
+    const message = Object.values(error.errors)
+      .map((val) => val.message)
+      .join(", ");
+
+    return res.status(400).json({
+      success: false,
+      message,
+    });
+  }
+
+  // ✅ Fallback error
+  res.status(500).json({
+    success: false,
+    message: "Server Error",
+  });
+}
 };
