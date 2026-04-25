@@ -40,11 +40,12 @@ const applicationSchema = new mongoose.Schema(
       required: [true, "Domain is required"],
       enum: [
         "Web Development",
-        "App Development",
+        "Mobile App Development",
+        "AI / Machine Learning",
+        "Cloud & DevOps",
+        "Cybersecurity",
+        "Data Analytics",
         "UI/UX Design",
-        "Data Science",
-        "Digital Marketing",
-        "Other",
       ],
     },
 
@@ -56,7 +57,7 @@ const applicationSchema = new mongoose.Schema(
       default: "",
     },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 // Optional: Index for faster admin queries
