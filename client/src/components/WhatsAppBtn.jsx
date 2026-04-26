@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const WhatsAppBtn = () => {
   return (
     <motion.a
-      href="https://wa.me/919519428887" // 👉 replace with your number
+      href="https://wa.me/919569065009" // 👉 replace with your number
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
