@@ -2,21 +2,23 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const WhatsAppBtn = () => {
+  const message = encodeURIComponent(
+    "Hi, I want to know more about your IT services and internship program."
+  );
+
   return (
     <motion.a
-      href="https://wa.me/919569065009" // 👉 replace with your number
+      href={`https://wa.me/919569065009?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      
-      /* 🔥 Entry Animation */
+
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 1, duration: 0.4 }}
 
-      /* 🔥 Bounce Animation */
       whileHover={{ scale: 1.1 }}
-      className="fixed bottom-30 right-6 z-[100]"
+      className="fixed bottom-28 right-6 z-[100]"
     >
       <motion.div
         animate={{ y: [0, -10, 0] }}
@@ -25,7 +27,6 @@ const WhatsAppBtn = () => {
         bg-gradient-to-br from-green-400 to-green-600 
         shadow-[0_10px_30px_rgba(0,255,150,0.4)]"
       >
-        {/* WhatsApp Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 32 32"
