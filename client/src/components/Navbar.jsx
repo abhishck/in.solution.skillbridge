@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       {/* Logo */}
       <div className="text-lg sm:text-xl font-extrabold tracking-tight text-white">
-        Skill<span className="text-cyan-400">Bridge Solutions</span>
+        Skill<span className="text-cyan-400">Bridge Tech Solutions</span>
       </div>
 
       {/* Desktop Links */}
