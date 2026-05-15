@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const PERKS = [
   {
@@ -55,9 +56,9 @@ export default function Internship() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-     if (loading) return; // 👈 prevent double click
+    if (loading) return; // 👈 prevent double click
 
-  setLoading(true);
+    setLoading(true);
 
     if (
       !form.name ||
@@ -71,9 +72,9 @@ export default function Internship() {
     }
 
     if (!form.domain) {
-  toast.error("Please select a domain");
-  return;
-}
+      toast.error("Please select a domain");
+      return;
+    }
 
     const toastId = toast.loading("Submitting application...");
 
@@ -109,9 +110,7 @@ export default function Internship() {
   };
 
   return (
-    <section className="px-4 py-20 bg-[#070d18] text-white"
-     id="internship"
-    >
+    <section className="px-4 py-20 bg-[#070d18] text-white" id="internship">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
         {/* LEFT */}
         <div>
@@ -184,7 +183,9 @@ export default function Internship() {
                   onChange={handleChange}
                   className="w-full mt-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2"
                 >
-                  <option className="text-black" value="">Select a track...</option>
+                  <option className="text-black" value="">
+                    Select a track...
+                  </option>
                   {DOMAINS.map((d) => (
                     <option className="text-black" key={d} value={d}>
                       {d}

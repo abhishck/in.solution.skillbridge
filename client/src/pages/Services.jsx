@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const SERVICES = [
   {
@@ -97,82 +98,108 @@ const item = {
 
 const Services = () => {
   return (
-    <section
-      id="services"
-      className="relative px-4 sm:px-6 py-20 sm:py-24 overflow-hidden bg-[#070b14]"
-    >
-      {/* Background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-[-100px] left-[-80px] w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] bg-cyan-500/10 blur-3xl rounded-full" />
-        <div className="absolute bottom-[-100px] right-[-80px] w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] bg-purple-500/10 blur-3xl rounded-full" />
-        <div className="absolute top-[40%] left-[40%] w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] bg-orange-500/5 blur-3xl rounded-full" />
+    <>
+      <Helmet>
+        <title>Services | Internships & Career Opportunities</title>
 
-        <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:30px_30px] sm:bg-[size:40px_40px]" />
-      </div>
+        <meta
+          name="description"
+          content="Find internships, training programs, and career opportunities with Skill Bridge Solutions."
+        />
 
-      <div className="relative max-w-6xl mx-auto text-center">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-12 sm:mb-14"
-        >
-          <span className="text-xs sm:text-sm text-cyan-400 font-medium">
-            What We Do
-          </span>
+        <meta
+          name="keywords"
+          content="internships, internship platform, career opportunities, students, jobs, training"
+        />
 
-          <h2 className="mt-3 text-white text-3xl sm:text-4xl md:text-5xl">
-            Our Core <span className="text-orange-400">Services</span>
-          </h2>
+        <meta property="og:title" content="Skill Bridge Solutions" />
 
-          <p className="text-gray-400 mt-4 max-w-md sm:max-w-xl mx-auto text-sm sm:text-base">
-            End-to-end IT services built to solve real problems and deliver measurable results.
-          </p>
-        </motion.div>
+        <meta
+          property="og:description"
+          content="Explore internships and career opportunities for students and freshers."
+        />
 
-        {/* Grid */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-left"
-        >
-          {SERVICES.map((s, i) => {
-            const c = styles[s.color];
+        <meta property="og:url" content="https://www.skillbridgesolutions.in" />
+      </Helmet>
 
-            return (
-              <motion.div
-                key={i}
-                variants={item}
-                whileHover={{ y: -6 }}
-                transition={{ type: "spring", stiffness: 200 }}
-                className={`group relative rounded-2xl p-5 sm:p-6 bg-white/5 border border-white/10 backdrop-blur-sm transition ${c.border} ${c.shadow}`}
-              >
-                <div
-                  className={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br ${c.glow} transition duration-300`}
-                />
+      <section
+        id="services"
+        className="relative px-4 sm:px-6 py-20 sm:py-24 overflow-hidden bg-[#070b14]"
+      >
+        {/* Background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-[-100px] left-[-80px] w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] bg-cyan-500/10 blur-3xl rounded-full" />
+          <div className="absolute bottom-[-100px] right-[-80px] w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] bg-purple-500/10 blur-3xl rounded-full" />
+          <div className="absolute top-[40%] left-[40%] w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] bg-orange-500/5 blur-3xl rounded-full" />
 
-                <div
-                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-lg sm:text-xl mb-3 sm:mb-4 ${c.icon}`}
+          <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:30px_30px] sm:bg-[size:40px_40px]" />
+        </div>
+
+        <div className="relative max-w-6xl mx-auto text-center">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12 sm:mb-14"
+          >
+            <span className="text-xs sm:text-sm text-cyan-400 font-medium">
+              What We Do
+            </span>
+
+            <h2 className="mt-3 text-white text-3xl sm:text-4xl md:text-5xl">
+              Our Core <span className="text-orange-400">Services</span>
+            </h2>
+
+            <p className="text-gray-400 mt-4 max-w-md sm:max-w-xl mx-auto text-sm sm:text-base">
+              End-to-end IT services built to solve real problems and deliver
+              measurable results.
+            </p>
+          </motion.div>
+
+          {/* Grid */}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-left"
+          >
+            {SERVICES.map((s, i) => {
+              const c = styles[s.color];
+
+              return (
+                <motion.div
+                  key={i}
+                  variants={item}
+                  whileHover={{ y: -6 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className={`group relative rounded-2xl p-5 sm:p-6 bg-white/5 border border-white/10 backdrop-blur-sm transition ${c.border} ${c.shadow}`}
                 >
-                  {s.icon}
-                </div>
+                  <div
+                    className={`absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br ${c.glow} transition duration-300`}
+                  />
 
-                <h3 className="text-base sm:text-lg font-semibold text-white">
-                  {s.title}
-                </h3>
+                  <div
+                    className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-lg sm:text-xl mb-3 sm:mb-4 ${c.icon}`}
+                  >
+                    {s.icon}
+                  </div>
 
-                <p className="text-xs sm:text-sm text-gray-400 mt-2 leading-relaxed">
-                  {s.desc}
-                </p>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      </div>
-    </section>
+                  <h3 className="text-base sm:text-lg font-semibold text-white">
+                    {s.title}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-gray-400 mt-2 leading-relaxed">
+                    {s.desc}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 };
 
