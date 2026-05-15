@@ -28,10 +28,26 @@ const CARDS = [
 ];
 
 const SOCIALS = [
-  { label: "LinkedIn", color: "cyan" },
-  { label: "Twitter / X", color: "purple" },
-  { label: "Instagram", color: "orange" },
-  { label: "GitHub", color: "green" },
+  {
+    label: "LinkedIn",
+    color: "cyan",
+    link: "https://www.linkedin.com/company/skillbridge-tech-solutions/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BHNiei8NAQlKMiXP2mxBkrA%3D%3D",
+  },
+  {
+    label: "Twitter / X",
+    color: "purple",
+    link: "https://twitter.com",
+  },
+  {
+    label: "Instagram",
+    color: "orange",
+    link: "https://www.instagram.com",
+  },
+  {
+    label: "GitHub",
+    color: "green",
+    link: "https://github.com",
+  },
 ];
 
 const socialStyles = {
@@ -165,7 +181,9 @@ const Contact = () => {
             {SOCIALS.map((s, i) => (
               <motion.a
                 key={i}
-                href="#"
+                href={s.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`px-4 sm:px-5 py-2 rounded-full border border-white/10 bg-white/5 text-xs sm:text-sm font-semibold text-gray-300 transition ${socialStyles[s.color]}`}
