@@ -73,27 +73,13 @@ const Portfolio = () => {
   return (
     <>
       <Helmet>
-        <title>Portfolio | Internships & Career Opportunities</title>
+  <title>Portfolio | Skill Bridge Solutions</title>
 
-        <meta
-          name="description"
-          content="Find internships, training programs, and career opportunities with Skill Bridge Solutions."
-        />
-
-        <meta
-          name="keywords"
-          content="internships, internship platform, career opportunities, students, jobs, training"
-        />
-
-        <meta property="og:title" content="Skill Bridge Solutions" />
-
-        <meta
-          property="og:description"
-          content="Explore internships and career opportunities for students and freshers."
-        />
-
-        <meta property="og:url" content="https://www.skillbridgesolutions.in" />
-      </Helmet>
+  <meta
+    name="description"
+    content="Explore projects, client work, and development portfolio by Skill Bridge Solutions."
+  />
+</Helmet>
       <section
         id="portfolio"
         className="relative px-4 sm:px-6 py-20 sm:py-24 overflow-hidden bg-[#070d18] text-white"

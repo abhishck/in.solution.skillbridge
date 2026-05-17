@@ -100,26 +100,12 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Services | Internships & Career Opportunities</title>
+        <title>IT Services | Skill Bridge Solutions</title>
 
         <meta
           name="description"
-          content="Find internships, training programs, and career opportunities with Skill Bridge Solutions."
+          content="Professional IT services including web development, AI solutions, UI/UX design, and software development."
         />
-
-        <meta
-          name="keywords"
-          content="internships, internship platform, career opportunities, students, jobs, training"
-        />
-
-        <meta property="og:title" content="Skill Bridge Solutions" />
-
-        <meta
-          property="og:description"
-          content="Explore internships and career opportunities for students and freshers."
-        />
-
-        <meta property="og:url" content="https://www.skillbridgesolutions.in" />
       </Helmet>
 
       <section

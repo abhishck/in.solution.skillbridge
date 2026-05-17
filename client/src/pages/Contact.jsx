@@ -77,26 +77,12 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>contact | Internships & Career Opportunities</title>
+        <title>Contact Us | Skill Bridge Solutions</title>
 
         <meta
           name="description"
-          content="Find internships, training programs, and career opportunities with Skill Bridge Solutions."
+          content="Get in touch with Skill Bridge Solutions for IT services, collaborations, and internship opportunities."
         />
-
-        <meta
-          name="keywords"
-          content="internships, internship platform, career opportunities, students, jobs, training"
-        />
-
-        <meta property="og:title" content="Skill Bridge Solutions" />
-
-        <meta
-          property="og:description"
-          content="Explore internships and career opportunities for students and freshers."
-        />
-
-        <meta property="og:url" content="https://www.skillbridgesolutions.in" />
       </Helmet>
       <section
         id="contact"

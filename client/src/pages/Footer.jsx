@@ -5,28 +5,7 @@ import { Helmet } from "react-helmet-async";
 const Footer = () => {
   return (
     <>
-      <Helmet>
-        <title>Footer | Internships & Career Opportunities</title>
-
-        <meta
-          name="description"
-          content="Find internships, training programs, and career opportunities with Skill Bridge Solutions."
-        />
-
-        <meta
-          name="keywords"
-          content="internships, internship platform, career opportunities, students, jobs, training"
-        />
-
-        <meta property="og:title" content="Skill Bridge Solutions" />
-
-        <meta
-          property="og:description"
-          content="Explore internships and career opportunities for students and freshers."
-        />
-
-        <meta property="og:url" content="https://www.skillbridgesolutions.in" />
-      </Helmet>
+     
       <footer className="relative px-4 sm:px-6 py-8 sm:py-10 overflow-hidden bg-[#050811] text-center text-white">
         {/* Background */}
         <div className="absolute inset-0">
